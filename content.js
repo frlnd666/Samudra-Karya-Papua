@@ -100,7 +100,7 @@ const BLOG_POSTS = [
   {
     id: "proyek-pembangunan-fasilitas-papua",
     date: "05 Juli 2026",
-    cover: "assets/logo.jpg",
+    cover: "assets/fasum.jpg",
     title: "Proyek Pembangunan Fasilitas Umum di Papua",
     excerpt: "PT. Samudra Karya Papua menyelesaikan proyek infrastruktur baru dengan standar mutu dan keselamatan kerja tinggi.",
     content: [
@@ -112,7 +112,7 @@ const BLOG_POSTS = [
   {
     id: "kemitraan-strategis-supplier-material",
     date: "28 Juni 2026",
-    cover: "assets/seal.jpg",
+    cover: "assets/suplier.jpg",
     title: "Memperkuat Jaringan Supplier Material di Wilayah Timur",
     excerpt: "Kerja sama baru dengan distributor material bertujuan mempercepat ketersediaan bahan baku proyek.",
     content: [
@@ -124,7 +124,7 @@ const BLOG_POSTS = [
   {
     id: "komitmen-legalitas-dan-standar-kerja",
     date: "10 Juni 2026",
-    cover: "assets/logo.jpg",
+    cover: "assets/seal.jpg",
     title: "Komitmen Legalitas dan Standar Kerja Perusahaan",
     excerpt: "Seluruh proses bisnis PT. Samudra Karya Papua dijalankan sesuai regulasi dan standar keselamatan kerja nasional.",
     content: [
