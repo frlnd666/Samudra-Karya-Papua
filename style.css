@@ -116,8 +116,7 @@ header.scrolled .brand img{height:36px;}
 .trust{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
 .trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
 .trust-seal{display:flex;justify-content:center;align-items:center;position:relative;}
-.trust-seal img{width:280px;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4));animation:rotateSlow 60s linear infinite;}
-@keyframes rotateSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.trust-seal img{width:280px;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4));}
 .quote-mark{font-family:'Cormorant Garamond',serif;font-size:70px;color:var(--gold);line-height:1;margin-bottom:10px;}
 .trust-text p.quote{font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.5;color:#eef1f6;margin-bottom:30px;font-weight:500;}
 .trust-author{display:flex;align-items:center;gap:14px;}
