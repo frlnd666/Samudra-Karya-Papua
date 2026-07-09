@@ -14,9 +14,9 @@ const SITE_CONTENT = {
     description: "Mitra terpercaya di bidang kontraktor, supplier, dan trading yang berkomitmen menghadirkan solusi infrastruktur dan pengadaan barang berkualitas tinggi di seluruh wilayah Papua.",
     stats: [
       { number: "10+", label: "Tahun Pengalaman" },
-      { number: "120+", label: "Proyek Selesai" },
-      { number: "40+", label: "Mitra & Klien" },
-      { number: "100%", label: "Berbasis Papua" }
+      { number: "12+", label: "Proyek Selesai" },
+      { number: "10+", label: "Mitra & Klien" },
+      { number: "100%", label: "Berbasis Indonesia Timur" }
     ]
   },
 
