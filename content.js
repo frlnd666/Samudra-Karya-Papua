@@ -76,7 +76,7 @@ const SITE_CONTENT = {
   contact: {
     address: "Jl. Contoh Alamat No. 00, Kota/Kabupaten, Provinsi Papua, Indonesia",
     phone: "+62 811-0000-0000",
-    email: "info@samudrakaryapapua.co.id",
+    email: "admin@samudrakaryapapua.web.id",
     hours: "Senin – Jumat, 08.00 – 17.00 WIT"
   },
 
