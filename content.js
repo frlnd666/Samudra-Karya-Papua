@@ -74,8 +74,8 @@ const SITE_CONTENT = {
   ],
 
   contact: {
-    address: "Jl. Contoh Alamat No. 00, Kota/Kabupaten, Provinsi Papua, Indonesia",
-    phone: "+62 811-0000-0000",
+    address: "Jl. Tanjung pamali, Lorong V Rt 003/Rw 006, Kel. Klabuku Malaimsimsa, kota Sorong, Prov. Papua Barat Daya. Kode Pos 98419",
+    phone: "+62 000-0000-0000",
     email: "admin@samudrakaryapapua.web.id",
     hours: "Senin – Jumat, 08.00 – 17.00 WIT"
   },
