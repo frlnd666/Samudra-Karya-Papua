@@ -98,6 +98,26 @@ const SITE_CONTENT = {
 
 const BLOG_POSTS = [
   {
+    id: "trading-benur-dan-lobster-papua",
+    date: "12 Juli 2026",
+    cover: "assets/lobster-cover.jpg",
+    title: "Peluang Trading Benur dan Lobster Berkualitas dari Papua",
+    excerpt: "PT. Samudra Karya Papua memperluas lini trading dengan komoditas benur dan lobster hasil laut Papua yang berkualitas ekspor.",
+    content: [
+      "Sebagai bagian dari pengembangan lini usaha Trading, PT. Samudra Karya Papua kini merambah komoditas hasil laut unggulan, yaitu benur (benih lobster) dan lobster dewasa berkualitas tinggi dari perairan Papua.",
+      "Perairan Papua dikenal memiliki ekosistem laut yang masih alami, menjadikan benur dan lobster yang dihasilkan memiliki kualitas premium dan sangat diminati baik pasar domestik maupun ekspor.",
+      "Kami bekerja sama dengan nelayan lokal dan menerapkan standar penanganan pascapanen yang ketat, mulai dari proses penangkapan, penyortiran ukuran, hingga sistem pengemasan yang menjaga tingkat kelangsungan hidup (survival rate) tetap tinggi selama pengiriman.",
+      "PT. Samudra Karya Papua berkomitmen menjalankan seluruh proses trading benur dan lobster sesuai regulasi yang berlaku, termasuk aspek keberlanjutan (sustainability) agar populasi lobster di alam tetap terjaga untuk jangka panjang.",
+      "Berikut dokumentasi hasil tangkapan dan proses penanganan benur serta lobster yang menjadi bagian dari standar kualitas kami."
+    ],
+    gallery: [
+      "assets/lobster-1.jpg",
+      "assets/lobster-2.jpg",
+      "assets/lobster-3.jpg",
+      "assets/lobster-4.jpg"
+    ]
+  },
+  {
     id: "proyek-pembangunan-fasilitas-papua",
     date: "05 Juli 2026",
     cover: "assets/fasum.jpg",
