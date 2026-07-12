@@ -67,6 +67,11 @@ function renderContact() {
   document.querySelector('[data-contact-phone]').textContent = d.phone;
   document.querySelector('[data-contact-email]').textContent = d.email;
   document.querySelector('[data-contact-hours]').textContent = d.hours;
+
+  const footerPhone = document.querySelector('[data-footer-phone]');
+  const footerEmail = document.querySelector('[data-footer-email]');
+  if (footerPhone) footerPhone.textContent = d.phone;
+  if (footerEmail) footerEmail.textContent = d.email;
 }
 
 function renderFooter() {
@@ -109,6 +114,23 @@ function openBlogModal(postId) {
   const overlay = document.getElementById('blogModalOverlay');
   const modal = document.getElementById('blogModal');
 
+  const galleryHtml = (post.gallery && post.gallery.length > 0) ? `
+    <div class="post-gallery" data-gallery>
+      <div class="gallery-track" data-gallery-track>
+        ${post.gallery.map(img => `
+          <div class="gallery-slide">
+            <img src="${img}" alt="${post.title}">
+          </div>
+        `).join('')}
+      </div>
+      <button class="gallery-nav prev" data-gallery-prev>‹</button>
+      <button class="gallery-nav next" data-gallery-next>›</button>
+      <div class="gallery-dots" data-gallery-dots>
+        ${post.gallery.map((_, i) => `<span class="dot" data-dot="${i}"></span>`).join('')}
+      </div>
+    </div>
+  ` : '';
+
   modal.innerHTML = `
     <button class="close-btn" id="closeBlogModal">✕</button>
     <div class="date">${post.date}</div>
@@ -117,12 +139,51 @@ function openBlogModal(postId) {
     <div class="content">
       ${post.content.map(p => `<p>${p}</p>`).join('')}
     </div>
+    ${galleryHtml}
   `;
 
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 
   document.getElementById('closeBlogModal').addEventListener('click', closeBlogModal);
+
+  if (post.gallery && post.gallery.length > 0) {
+    setupGallerySlider(modal);
+  }
+}
+
+function setupGallerySlider(modal) {
+  const track = modal.querySelector('[data-gallery-track]');
+  const prevBtn = modal.querySelector('[data-gallery-prev]');
+  const nextBtn = modal.querySelector('[data-gallery-next]');
+  const dots = modal.querySelectorAll('[data-dot]');
+  const slides = track.querySelectorAll('.gallery-slide');
+  let currentIndex = 0;
+
+  function goToSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    currentIndex = index;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+  }
+
+  prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.dot)));
+  });
+
+  let touchStartX = 0;
+  track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  track.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (diff > 50) goToSlide(currentIndex + 1);
+    if (diff < -50) goToSlide(currentIndex - 1);
+  });
+
+  goToSlide(0);
 }
 
 function closeBlogModal() {
